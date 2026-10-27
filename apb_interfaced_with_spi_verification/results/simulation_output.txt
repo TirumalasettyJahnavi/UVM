@@ -1,0 +1,1765 @@
+UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test1...
+# include_coverage not located
+#   did you mean recording_detail?
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test1                       -     @480
+#   envh                       env                         -     @561
+#     apb_agt_top              apb_agent_top               -     @573
+#       agenth                 apb_agent                   -     @801
+#         drvh                 apb_driver                  -     @810
+#           rsp_port           uvm_analysis_port           -     @825
+#           seq_item_port      uvm_seq_item_pull_port      -     @817
+#         monh                 apb_monitor                 -     @942
+#           monitor_port       uvm_analysis_port           -     @949
+#         seqrh                apb_sequencer               -     @833
+#           rsp_export         uvm_analysis_export         -     @840
+#           seq_item_export    uvm_seq_item_pull_imp       -     @934
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     api_agt_top              spi_agent_top               -     @584
+#       agnth                  spi_agent                   -     @964
+#         drvh                 spi_driver                  -     @973
+#           rsp_port           uvm_analysis_port           -     @988
+#           seq_item_port      uvm_seq_item_pull_port      -     @980
+#         monh                 spi_monitor                 -     @1105
+#           mon_port           uvm_analysis_port           -     @1112
+#         seqrh                spi_sequencer               -     @996
+#           rsp_export         uvm_analysis_export         -     @1003
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1097
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     sb                       scoreboard                  -     @700
+#       apb_mon                uvm_tlm_analysis_fifo #(T)  -     @754
+#         analysis_export      uvm_analysis_imp            -     @793
+#         get_ap               uvm_analysis_port           -     @785
+#         get_peek_export      uvm_get_peek_imp            -     @769
+#         put_ap               uvm_analysis_port           -     @777
+#         put_export           uvm_put_imp                 -     @761
+#       spi_mon                uvm_tlm_analysis_fifo #(T)  -     @707
+#         analysis_export      uvm_analysis_imp            -     @746
+#         get_ap               uvm_analysis_port           -     @738
+#         get_peek_export      uvm_get_peek_imp            -     @722
+#         put_ap               uvm_analysis_port           -     @730
+#         put_export           uvm_put_imp                 -     @714
+#     vseqrh                   virtual_sequencer           -     @591
+#       rsp_export             uvm_analysis_export         -     @598
+#       seq_item_export        uvm_seq_item_pull_imp       -     @692
+#       arbitration_queue      array                       0     -
+#       lock_queue             array                       0     -
+#       num_last_reqs          integral                    32    'd1
+#       num_last_rsps          integral                    32    'd1
+# --------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(40) @ 0: uvm_test_top.envh.apb_agt_top.agenth.monh [uvm_test_top.envh.apb_agt_top.agenth.monh] monitor block
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 55: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    15
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq1
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq1
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10001
+#   PADDR                        integral  3     'b0
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 55: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(111) @ 55: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 55: uvm_test_top.envh.sb [scoreboard] baud 00000000
+# UVM_INFO ../tb/scoreboard.sv(352) @ 55: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 55: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 95: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    55
+#   end_time                     time      64    55
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq1
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq1
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b0
+#   PADDR                        integral  3     'b1
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 95: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 135: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    95
+#   end_time                     time      64    95
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq1
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq1
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10001
+#   PADDR                        integral  3     'b10
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 135: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 175: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    135
+#   end_time                     time      64    135
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq1
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq1
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11111111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 175: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 215: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    175
+#   end_time                     time      64    175
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq1
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq1
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10100110
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 215: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../spi_agent/spi_driver.sv(115) @ 775: uvm_test_top.envh.api_agt_top.agnth.drvh [spi_driver] IN SPI DRIVER
+#  ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            spi_xtn   -     @1165
+#   begin_time                   time      64    0
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    5     seq_m
+#   parent sequence (full name)  string    47    uvm_test_top.envh.api_agt_top.agnth.seqrh.seq_m
+#   sequencer                    string    41    uvm_test_top.envh.api_agt_top.agnth.seqrh
+#   MISO                         integral  8     'b1110000
+#   MOSI                         integral  8     'b0
+#   SS                           integral  1     'b0
+#   SPI_INTERRUPT_REQUEST        integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(133) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard spi
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b1110000
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b0
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(205) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 815: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(205) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 815: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(232) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR2 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(234) @ 815: uvm_test_top.envh.sb [scoreboard] CR2 DATA = 00000000 apb_xtn 0
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(259) @ 815: uvm_test_top.envh.sb [scoreboard] ==========baud COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(261) @ 815: uvm_test_top.envh.sb [scoreboard] baud DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(169) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COMPARISSION btw pwdata and mosi SUCCESSFULL
+# UVM_INFO ../tb/scoreboard.sv(323) @ 815: uvm_test_top.envh.sb [scoreboard] ==========data COMPARISION FAILED===========
+# UVM_INFO ../tb/scoreboard.sv(325) @ 815: uvm_test_top.envh.sb [scoreboard] data DATA = 00000000 apb_xtn 11111111
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00010001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(192) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COmparission  btw prdata and miso is not successfull
+# UVM_INFO ../spi_agent/spi_monitor.sv(113) @ 825: uvm_test_top.envh.api_agt_top.agnth.monh [spi_monitor] IN SPI MONITOR
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b1110000
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b0
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+#
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1785: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   66
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_driver]     5
+# [apb_monitor]     5
+# [scoreboard]    40
+# [spi_driver]     1
+# [spi_monitor]     1
+# [uvm_test_top.envh.apb_agt_top.agenth.monh]     1
+# [uvm_test_top.envh.sb]     8
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1785 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 22:21:34 on Oct 27,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 2
+
+
+
+
+
+ UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test2...
+# include_coverage not located
+#   did you mean recording_detail?
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test2                       -     @480
+#   envh                       env                         -     @561
+#     apb_agt_top              apb_agent_top               -     @573
+#       agenth                 apb_agent                   -     @801
+#         drvh                 apb_driver                  -     @810
+#           rsp_port           uvm_analysis_port           -     @825
+#           seq_item_port      uvm_seq_item_pull_port      -     @817
+#         monh                 apb_monitor                 -     @942
+#           monitor_port       uvm_analysis_port           -     @949
+#         seqrh                apb_sequencer               -     @833
+#           rsp_export         uvm_analysis_export         -     @840
+#           seq_item_export    uvm_seq_item_pull_imp       -     @934
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     api_agt_top              spi_agent_top               -     @584
+#       agnth                  spi_agent                   -     @964
+#         drvh                 spi_driver                  -     @973
+#           rsp_port           uvm_analysis_port           -     @988
+#           seq_item_port      uvm_seq_item_pull_port      -     @980
+#         monh                 spi_monitor                 -     @1105
+#           mon_port           uvm_analysis_port           -     @1112
+#         seqrh                spi_sequencer               -     @996
+#           rsp_export         uvm_analysis_export         -     @1003
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1097
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     sb                       scoreboard                  -     @700
+#       apb_mon                uvm_tlm_analysis_fifo #(T)  -     @754
+#         analysis_export      uvm_analysis_imp            -     @793
+#         get_ap               uvm_analysis_port           -     @785
+#         get_peek_export      uvm_get_peek_imp            -     @769
+#         put_ap               uvm_analysis_port           -     @777
+#         put_export           uvm_put_imp                 -     @761
+#       spi_mon                uvm_tlm_analysis_fifo #(T)  -     @707
+#         analysis_export      uvm_analysis_imp            -     @746
+#         get_ap               uvm_analysis_port           -     @738
+#         get_peek_export      uvm_get_peek_imp            -     @722
+#         put_ap               uvm_analysis_port           -     @730
+#         put_export           uvm_put_imp                 -     @714
+#     vseqrh                   virtual_sequencer           -     @591
+#       rsp_export             uvm_analysis_export         -     @598
+#       seq_item_export        uvm_seq_item_pull_imp       -     @692
+#       arbitration_queue      array                       0     -
+#       lock_queue             array                       0     -
+#       num_last_reqs          integral                    32    'd1
+#       num_last_rsps          integral                    32    'd1
+# --------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(40) @ 0: uvm_test_top.envh.apb_agt_top.agenth.monh [uvm_test_top.envh.apb_agt_top.agenth.monh] monitor block
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 55: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    15
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq2
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq2
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10101
+#   PADDR                        integral  3     'b0
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 55: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10101
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(111) @ 55: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10101
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 55: uvm_test_top.envh.sb [scoreboard] baud 00000000
+# UVM_INFO ../tb/scoreboard.sv(352) @ 55: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 55: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 95: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    55
+#   end_time                     time      64    55
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq2
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq2
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b0
+#   PADDR                        integral  3     'b1
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 95: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 135: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    95
+#   end_time                     time      64    95
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq2
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq2
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10001
+#   PADDR                        integral  3     'b10
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 135: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 175: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    135
+#   end_time                     time      64    135
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq2
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq2
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11111111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 175: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 215: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    175
+#   end_time                     time      64    175
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq2
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq2
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11000001
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 215: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../spi_agent/spi_driver.sv(115) @ 815: uvm_test_top.envh.api_agt_top.agnth.drvh [spi_driver] IN SPI DRIVER
+#  ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            spi_xtn   -     @1165
+#   begin_time                   time      64    0
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    5     seq_m
+#   parent sequence (full name)  string    47    uvm_test_top.envh.api_agt_top.agnth.seqrh.seq_m
+#   sequencer                    string    41    uvm_test_top.envh.api_agt_top.agnth.seqrh
+#   MISO                         integral  8     'b10110111
+#   MOSI                         integral  8     'b0
+#   SS                           integral  1     'b0
+#   SPI_INTERRUPT_REQUEST        integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(133) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard spi
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b10110111
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b1
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(205) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 855: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00010101 apb_xtn 10101
+# UVM_INFO ../tb/scoreboard.sv(205) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 855: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00010101 apb_xtn 10101
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(232) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR2 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(234) @ 855: uvm_test_top.envh.sb [scoreboard] CR2 DATA = 00000000 apb_xtn 0
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(259) @ 855: uvm_test_top.envh.sb [scoreboard] ==========baud COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(261) @ 855: uvm_test_top.envh.sb [scoreboard] baud DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(169) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COMPARISSION btw pwdata and mosi SUCCESSFULL
+# UVM_INFO ../tb/scoreboard.sv(323) @ 855: uvm_test_top.envh.sb [scoreboard] ==========data COMPARISION FAILED===========
+# UVM_INFO ../tb/scoreboard.sv(325) @ 855: uvm_test_top.envh.sb [scoreboard] data DATA = 00000000 apb_xtn 11111111
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00010101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(192) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COmparission  btw prdata and miso is not successfull
+# UVM_INFO ../spi_agent/spi_monitor.sv(113) @ 865: uvm_test_top.envh.api_agt_top.agnth.monh [spi_monitor] IN SPI MONITOR
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b10110111
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b1
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+#
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   66
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_driver]     5
+# [apb_monitor]     5
+# [scoreboard]    40
+# [spi_driver]     1
+# [spi_monitor]     1
+# [uvm_test_top.envh.apb_agt_top.agenth.monh]     1
+# [uvm_test_top.envh.sb]     8
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1825 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 22:21:35 on Oct 27,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+
+
+
+
+UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test3...
+# include_coverage not located
+#   did you mean recording_detail?
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test3                       -     @480
+#   envh                       env                         -     @561
+#     apb_agt_top              apb_agent_top               -     @573
+#       agenth                 apb_agent                   -     @801
+#         drvh                 apb_driver                  -     @810
+#           rsp_port           uvm_analysis_port           -     @825
+#           seq_item_port      uvm_seq_item_pull_port      -     @817
+#         monh                 apb_monitor                 -     @942
+#           monitor_port       uvm_analysis_port           -     @949
+#         seqrh                apb_sequencer               -     @833
+#           rsp_export         uvm_analysis_export         -     @840
+#           seq_item_export    uvm_seq_item_pull_imp       -     @934
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     api_agt_top              spi_agent_top               -     @584
+#       agnth                  spi_agent                   -     @964
+#         drvh                 spi_driver                  -     @973
+#           rsp_port           uvm_analysis_port           -     @988
+#           seq_item_port      uvm_seq_item_pull_port      -     @980
+#         monh                 spi_monitor                 -     @1105
+#           mon_port           uvm_analysis_port           -     @1112
+#         seqrh                spi_sequencer               -     @996
+#           rsp_export         uvm_analysis_export         -     @1003
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1097
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     sb                       scoreboard                  -     @700
+#       apb_mon                uvm_tlm_analysis_fifo #(T)  -     @754
+#         analysis_export      uvm_analysis_imp            -     @793
+#         get_ap               uvm_analysis_port           -     @785
+#         get_peek_export      uvm_get_peek_imp            -     @769
+#         put_ap               uvm_analysis_port           -     @777
+#         put_export           uvm_put_imp                 -     @761
+#       spi_mon                uvm_tlm_analysis_fifo #(T)  -     @707
+#         analysis_export      uvm_analysis_imp            -     @746
+#         get_ap               uvm_analysis_port           -     @738
+#         get_peek_export      uvm_get_peek_imp            -     @722
+#         put_ap               uvm_analysis_port           -     @730
+#         put_export           uvm_put_imp                 -     @714
+#     vseqrh                   virtual_sequencer           -     @591
+#       rsp_export             uvm_analysis_export         -     @598
+#       seq_item_export        uvm_seq_item_pull_imp       -     @692
+#       arbitration_queue      array                       0     -
+#       lock_queue             array                       0     -
+#       num_last_reqs          integral                    32    'd1
+#       num_last_rsps          integral                    32    'd1
+# --------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(40) @ 0: uvm_test_top.envh.apb_agt_top.agenth.monh [uvm_test_top.envh.apb_agt_top.agenth.monh] monitor block
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 55: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    15
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq3
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq3
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b11001
+#   PADDR                        integral  3     'b0
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 55: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11001
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(111) @ 55: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11001
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 55: uvm_test_top.envh.sb [scoreboard] baud 00000000
+# UVM_INFO ../tb/scoreboard.sv(352) @ 55: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 55: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 95: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    55
+#   end_time                     time      64    55
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq3
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq3
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b0
+#   PADDR                        integral  3     'b1
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 95: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 135: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    95
+#   end_time                     time      64    95
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq3
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq3
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10001
+#   PADDR                        integral  3     'b10
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 135: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 175: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    135
+#   end_time                     time      64    135
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq3
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq3
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11111111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 175: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../spi_agent/spi_driver.sv(115) @ 775: uvm_test_top.envh.api_agt_top.agnth.drvh [spi_driver] IN SPI DRIVER
+#  ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            spi_xtn   -     @1165
+#   begin_time                   time      64    0
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    5     seq_m
+#   parent sequence (full name)  string    47    uvm_test_top.envh.api_agt_top.agnth.seqrh.seq_m
+#   sequencer                    string    41    uvm_test_top.envh.api_agt_top.agnth.seqrh
+#   MISO                         integral  8     'b1000101
+#   MOSI                         integral  8     'b0
+#   SS                           integral  1     'b0
+#   SPI_INTERRUPT_REQUEST        integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(133) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard spi
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b1000101
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b0
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(205) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 815: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00011001 apb_xtn 11001
+# UVM_INFO ../tb/scoreboard.sv(205) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 815: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00011001 apb_xtn 11001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(232) @ 815: uvm_test_top.envh.sb [scoreboard] ==========CR2 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(234) @ 815: uvm_test_top.envh.sb [scoreboard] CR2 DATA = 00000000 apb_xtn 0
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(259) @ 815: uvm_test_top.envh.sb [scoreboard] ==========baud COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(261) @ 815: uvm_test_top.envh.sb [scoreboard] baud DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 815: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 815: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 815: uvm_test_top.envh.sb [scoreboard] status 00110000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 815: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(169) @ 815: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COMPARISSION btw pwdata and mosi SUCCESSFULL
+# UVM_INFO ../tb/scoreboard.sv(323) @ 815: uvm_test_top.envh.sb [scoreboard] ==========data COMPARISION FAILED===========
+# UVM_INFO ../tb/scoreboard.sv(325) @ 815: uvm_test_top.envh.sb [scoreboard] data DATA = 00000000 apb_xtn 11111111
+# UVM_INFO ../spi_agent/spi_monitor.sv(113) @ 825: uvm_test_top.envh.api_agt_top.agnth.monh [spi_monitor] IN SPI MONITOR
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b1000101
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b0
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 1205: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    1175
+#   end_time                     time      64    175
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq3
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq3
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11010111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 1205: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(111) @ 1205: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 1205: uvm_test_top.envh.sb [scoreboard] CTRL1 00011001
+# UVM_INFO ../tb/scoreboard.sv(344) @ 1205: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 1205: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 1205: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 1205: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(192) @ 1205: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COmparission  btw prdata and miso is not successfull
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 2205: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   66
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_driver]     5
+# [apb_monitor]     5
+# [scoreboard]    40
+# [spi_driver]     1
+# [spi_monitor]     1
+# [uvm_test_top.envh.apb_agt_top.agenth.monh]     1
+# [uvm_test_top.envh.sb]     8
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 2205 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 22:21:37 on Oct 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+
+
+
+
+
+
+
+
+UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test test4...
+# include_coverage not located
+#   did you mean recording_detail?
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------------
+# Name                         Type                        Size  Value
+# --------------------------------------------------------------------
+# uvm_test_top                 test4                       -     @480
+#   envh                       env                         -     @561
+#     apb_agt_top              apb_agent_top               -     @573
+#       agenth                 apb_agent                   -     @801
+#         drvh                 apb_driver                  -     @810
+#           rsp_port           uvm_analysis_port           -     @825
+#           seq_item_port      uvm_seq_item_pull_port      -     @817
+#         monh                 apb_monitor                 -     @942
+#           monitor_port       uvm_analysis_port           -     @949
+#         seqrh                apb_sequencer               -     @833
+#           rsp_export         uvm_analysis_export         -     @840
+#           seq_item_export    uvm_seq_item_pull_imp       -     @934
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     api_agt_top              spi_agent_top               -     @584
+#       agnth                  spi_agent                   -     @964
+#         drvh                 spi_driver                  -     @973
+#           rsp_port           uvm_analysis_port           -     @988
+#           seq_item_port      uvm_seq_item_pull_port      -     @980
+#         monh                 spi_monitor                 -     @1105
+#           mon_port           uvm_analysis_port           -     @1112
+#         seqrh                spi_sequencer               -     @996
+#           rsp_export         uvm_analysis_export         -     @1003
+#           seq_item_export    uvm_seq_item_pull_imp       -     @1097
+#           arbitration_queue  array                       0     -
+#           lock_queue         array                       0     -
+#           num_last_reqs      integral                    32    'd1
+#           num_last_rsps      integral                    32    'd1
+#     sb                       scoreboard                  -     @700
+#       apb_mon                uvm_tlm_analysis_fifo #(T)  -     @754
+#         analysis_export      uvm_analysis_imp            -     @793
+#         get_ap               uvm_analysis_port           -     @785
+#         get_peek_export      uvm_get_peek_imp            -     @769
+#         put_ap               uvm_analysis_port           -     @777
+#         put_export           uvm_put_imp                 -     @761
+#       spi_mon                uvm_tlm_analysis_fifo #(T)  -     @707
+#         analysis_export      uvm_analysis_imp            -     @746
+#         get_ap               uvm_analysis_port           -     @738
+#         get_peek_export      uvm_get_peek_imp            -     @722
+#         put_ap               uvm_analysis_port           -     @730
+#         put_export           uvm_put_imp                 -     @714
+#     vseqrh                   virtual_sequencer           -     @591
+#       rsp_export             uvm_analysis_export         -     @598
+#       seq_item_export        uvm_seq_item_pull_imp       -     @692
+#       arbitration_queue      array                       0     -
+#       lock_queue             array                       0     -
+#       num_last_reqs          integral                    32    'd1
+#       num_last_rsps          integral                    32    'd1
+# --------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(40) @ 0: uvm_test_top.envh.apb_agt_top.agenth.monh [uvm_test_top.envh.apb_agt_top.agenth.monh] monitor block
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 55: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    15
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq4
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq4
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b11101
+#   PADDR                        integral  3     'b0
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 55: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11101
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(111) @ 55: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1146
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11101
+#   PADDR    integral  3     'b0
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 55: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 55: uvm_test_top.envh.sb [scoreboard] baud 00000000
+# UVM_INFO ../tb/scoreboard.sv(352) @ 55: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 55: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 95: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    55
+#   end_time                     time      64    55
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq4
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq4
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b0
+#   PADDR                        integral  3     'b1
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 95: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 135: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    95
+#   end_time                     time      64    95
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq4
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq4
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b0
+#   PWDATA                       integral  8     'b10001
+#   PADDR                        integral  3     'b10
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 135: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 175: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    135
+#   end_time                     time      64    135
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq4
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq4
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b0
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11111111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b1
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 175: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_driver.sv(121) @ 215: uvm_test_top.envh.apb_agt_top.agenth.drvh [apb_driver] IN apb driver
+# ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            apb_xtn   -     @1161
+#   begin_time                   time      64    175
+#   end_time                     time      64    175
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    4     seq4
+#   parent sequence (full name)  string    47    uvm_test_top.envh.apb_agt_top.agenth.seqrh.seq4
+#   sequencer                    string    42    uvm_test_top.envh.apb_agt_top.agenth.seqrh
+#   PSEL                         integral  1     'b1
+#   PRESET                       integral  1     'b1
+#   PENABLE                      integral  1     'b1
+#   PWDATA                       integral  8     'b11111111
+#   PADDR                        integral  3     'b101
+#   PSLVERR                      integral  1     'b0
+#   PRDATA                       integral  8     'b0
+#   PREADY                       integral  1     'b0
+#   PWRITE                       integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../apb_agent/apb_monitor.sv(96) @ 215: uvm_test_top.envh.apb_agt_top.agenth.monh [apb_monitor] IN apb MONITOR
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../spi_agent/spi_driver.sv(115) @ 815: uvm_test_top.envh.api_agt_top.agnth.drvh [spi_driver] IN SPI DRIVER
+#  ----------------------------------------------------------------------------------------------
+# Name                           Type      Size  Value
+# ----------------------------------------------------------------------------------------------
+# req                            spi_xtn   -     @1165
+#   begin_time                   time      64    0
+#   depth                        int       32    'd2
+#   parent sequence (name)       string    5     seq_m
+#   parent sequence (full name)  string    47    uvm_test_top.envh.api_agt_top.agnth.seqrh.seq_m
+#   sequencer                    string    41    uvm_test_top.envh.api_agt_top.agnth.seqrh
+#   MISO                         integral  8     'b10110100
+#   MOSI                         integral  8     'b0
+#   SS                           integral  1     'b0
+#   SPI_INTERRUPT_REQUEST        integral  1     'b0
+# ----------------------------------------------------------------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(133) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard spi
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b10110100
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b1
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(205) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 855: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00011101 apb_xtn 11101
+# UVM_INFO ../tb/scoreboard.sv(205) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR1 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(207) @ 855: uvm_test_top.envh.sb [scoreboard] CR1 DATA = 00011101 apb_xtn 11101
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1241
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b1
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(232) @ 855: uvm_test_top.envh.sb [scoreboard] ==========CR2 COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(234) @ 855: uvm_test_top.envh.sb [scoreboard] CR2 DATA = 00000000 apb_xtn 0
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# ----------------------------------
+# Name       Type      Size  Value
+# ----------------------------------
+# xtn        apb_xtn   -     @1266
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b10001
+#   PADDR    integral  3     'b10
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# ----------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(259) @ 855: uvm_test_top.envh.sb [scoreboard] ==========baud COMPARISION SUCCESSFULL===========
+# UVM_INFO ../tb/scoreboard.sv(261) @ 855: uvm_test_top.envh.sb [scoreboard] baud DATA = 00010001 apb_xtn 10001
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# -------------------------------------
+# Name       Type      Size  Value
+# -------------------------------------
+# xtn        apb_xtn   -     @1270
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b11111111
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b1
+# -------------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(169) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COMPARISSION btw pwdata and mosi SUCCESSFULL
+# UVM_INFO ../tb/scoreboard.sv(323) @ 855: uvm_test_top.envh.sb [scoreboard] ==========data COMPARISION FAILED===========
+# UVM_INFO ../tb/scoreboard.sv(325) @ 855: uvm_test_top.envh.sb [scoreboard] data DATA = 00000000 apb_xtn 11111111
+# UVM_INFO ../tb/scoreboard.sv(111) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] in scoreboard
+# --------------------------------
+# Name       Type      Size  Value
+# --------------------------------
+# xtn        apb_xtn   -     @1274
+#   PSEL     integral  1     'b1
+#   PRESET   integral  1     'b1
+#   PENABLE  integral  1     'b1
+#   PWDATA   integral  8     'b0
+#   PADDR    integral  3     'b101
+#   PSLVERR  integral  1     'b0
+#   PRDATA   integral  8     'b0
+#   PREADY   integral  1     'b1
+#   PWRITE   integral  1     'b0
+# --------------------------------
+#
+# UVM_INFO ../tb/scoreboard.sv(340) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL1 00011101
+# UVM_INFO ../tb/scoreboard.sv(344) @ 855: uvm_test_top.envh.sb [scoreboard] CTRL2 00000000
+# UVM_INFO ../tb/scoreboard.sv(348) @ 855: uvm_test_top.envh.sb [scoreboard] baud 00010001
+# UVM_INFO ../tb/scoreboard.sv(352) @ 855: uvm_test_top.envh.sb [scoreboard] status 00100000
+# UVM_INFO ../tb/scoreboard.sv(356) @ 855: uvm_test_top.envh.sb [scoreboard] data 00000000
+# UVM_INFO ../tb/scoreboard.sv(192) @ 855: uvm_test_top.envh.sb [uvm_test_top.envh.sb] COmparission  btw prdata and miso is not successfull
+# UVM_INFO ../spi_agent/spi_monitor.sv(113) @ 865: uvm_test_top.envh.api_agt_top.agnth.monh [spi_monitor] IN SPI MONITOR
+# ---------------------------------------------------
+# Name                     Type      Size  Value
+# ---------------------------------------------------
+# xtn                      spi_xtn   -     @1278
+#   MISO                   integral  8     'b10110100
+#   MOSI                   integral  8     'b11111111
+#   SS                     integral  1     'b1
+#   SPI_INTERRUPT_REQUEST  integral  1     'b0
+# ---------------------------------------------------
+#
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 1825: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+#
+# --- UVM Report Summary ---
+#
+# ** Report counts by severity
+# UVM_INFO :   66
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# [apb_driver]     5
+# [apb_monitor]     5
+# [scoreboard]    40
+# [spi_driver]     1
+# [spi_monitor]     1
+# [uvm_test_top.envh.apb_agt_top.agenth.monh]     1
+# [uvm_test_top.envh.sb]     8
+# ** Note: $finish    : /home/cad/eda/MENTORGRAPHICS/Questasim/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 1825 ns  Iteration: 54  Instance: /top
+# Saving coverage database on exit...
+# End time: 22:21:39 on Oct 27,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+
+
+
+
